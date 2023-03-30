@@ -50,21 +50,14 @@ public class HL7App {
             System.out.println("Patient Results: " + oru.getPATIENT_RESULTReps());
             List<ORU_R01_PATIENT_RESULT> patientResults = oru.getPATIENT_RESULTAll();
             for (ORU_R01_PATIENT_RESULT patientResult : patientResults) {
-                System.out.println("Order Observations: " + patientResult.getORDER_OBSERVATIONReps());
-                int orderObservationCount = 1;
+                System.out.println("\tOrder Observations: " + patientResult.getORDER_OBSERVATIONReps());
                 List<ORU_R01_ORDER_OBSERVATION> orderObservations = patientResult.getORDER_OBSERVATIONAll();
                 for (ORU_R01_ORDER_OBSERVATION orderObservation : orderObservations) {
-                    System.out.println("OrderObservation " + orderObservationCount++);
-                    System.out.println("Observations: " + orderObservation.getOBSERVATIONReps());
-                    int observationCount = 1;
+                    System.out.println("\t\t4 - SI : " + orderObservation.getOBR().getObr4_UniversalServiceIdentifier());
+                    System.out.println("\t\tObservations: " + orderObservation.getOBSERVATIONReps());
                     List<ORU_R01_OBSERVATION> observations = orderObservation.getOBSERVATIONAll();
                     for (ORU_R01_OBSERVATION observation : observations) {
-                        System.out.println("Observation " + observationCount++);
-                        OBX obx = observation.getOBX();
-                        ID status = obx.getObservationResultStatus();
-                        System.out.println("Observation Result No" + obx.getSetIDOBX());
-                        System.out.println("Result status = " + status);
-                        System.out.println(obx.getMessage());
+                        parseObservation(observation);
                     }
                 }
             }
@@ -72,5 +65,13 @@ public class HL7App {
         } catch (HL7Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static void parseObservation(ORU_R01_OBSERVATION observation) {
+        OBX obx = observation.getOBX();
+        System.out.println("\t\t\tOBX Set ID" + obx.getObx1_SetIDOBX());
+        System.out.println("\t\t\tValue Type " + obx.getObx2_ValueType());
+        System.out.println("\t\t\tValue Type " + obx.getObx3_ObservationIdentifier());
+        System.out.println("\t\t\tResult status = " + obx.getObx11_ObservationResultStatus());
     }
 }
