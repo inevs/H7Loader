@@ -51,14 +51,20 @@ public class HL7App {
             List<ORU_R01_PATIENT_RESULT> patientResults = oru.getPATIENT_RESULTAll();
             for (ORU_R01_PATIENT_RESULT patientResult : patientResults) {
                 System.out.println("Order Observations: " + patientResult.getORDER_OBSERVATIONReps());
+                int orderObservationCount = 1;
                 List<ORU_R01_ORDER_OBSERVATION> orderObservations = patientResult.getORDER_OBSERVATIONAll();
                 for (ORU_R01_ORDER_OBSERVATION orderObservation : orderObservations) {
+                    System.out.println("OrderObservation " + orderObservationCount++);
                     System.out.println("Observations: " + orderObservation.getOBSERVATIONReps());
+                    int observationCount = 1;
                     List<ORU_R01_OBSERVATION> observations = orderObservation.getOBSERVATIONAll();
                     for (ORU_R01_OBSERVATION observation : observations) {
+                        System.out.println("Observation " + observationCount++);
                         OBX obx = observation.getOBX();
                         ID status = obx.getObservationResultStatus();
-                        System.out.println(status);
+                        System.out.println("Observation Result No" + obx.getSetIDOBX());
+                        System.out.println("Result status = " + status);
+                        System.out.println(obx.getMessage());
                     }
                 }
             }

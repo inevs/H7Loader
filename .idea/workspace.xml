@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="031363f6-f8d2-46ae-8d6f-e9a9067457e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/shg/hl7/HL7App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/shg/hl7/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/multiple1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/multiple169" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/multiple748" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/multiple868" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/shg/hl7/HL7App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/shg/hl7/HL7App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,21 +97,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/shg/hl7/HL7App.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/shg/hl7/HL7App.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
